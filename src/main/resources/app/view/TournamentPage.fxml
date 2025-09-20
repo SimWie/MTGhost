@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.controller.TournamentPageController"
+            prefHeight="600"
+            prefWidth="750">
+    <center>
+        <GridPane hgap="12" vgap="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="NEVER" />
+                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+                <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" />
+            </columnConstraints>
+
+            <!-- Zeile 0 -->
+            <Label text="Tournament:" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-size:18px;"/>
+            <Label fx:id="tournamentLabel" GridPane.rowIndex="0" GridPane.columnIndex="1" style="-fx-font-size:18px;"/>
+            <Button fx:id="backButton" text="Zurück" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+            <Button fx:id="startButton" text="Start" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+
+            <!-- Zeile 1 -->
+            <Label text="Type:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-size:18px;"/>
+            <Label fx:id="tournamentTypeLabel" GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-font-size:18px;"/>
+
+            <!-- Zeile 2 -->
+            <Label text="Playdate:" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-size:18px;"/>
+            <Label fx:id="tournamentPlaydateLabel" GridPane.rowIndex="2" GridPane.columnIndex="1" style="-fx-font-size:18px;"/>
+
+            <!-- Zeile 3 -->
+            <Label text="Status:" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-size:18px;"/>
+            <Label fx:id="tournamentStatusLabel" GridPane.rowIndex="3" GridPane.columnIndex="1" style="-fx-font-size:18px;"/>
+
+            <!-- Zeile 4: Eingabezeile über beide Spalten -->
+            <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="3">
+                <TextField fx:id="teamNameField" promptText="Team name" HBox.hgrow="ALWAYS"/>
+                <Button fx:id="addTeamButton" text="Add Team" />
+                <Button fx:id="rmvTeamButton" text="rmv Team" />
+            </HBox>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox spacing="20">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Left: Team List -->
+            <VBox spacing="10">
+                <Label text="Teams" style="-fx-font-weight: bold;" />
+                <ListView fx:id="teamListView" prefWidth="200" prefHeight="300"/>
+            </VBox>
+
+            <!-- Right: Players of selected team -->
+            <VBox fx:id="teamDetailBox" spacing="10" visible="false">
+                <Label fx:id="selectedTeamLabel" text="Players of ..." style="-fx-font-weight: bold;" />
+                <ListView fx:id="playerListView" prefHeight="200" />
+                <HBox spacing="10">
+                    <TextField fx:id="playerNameField" promptText="Player name" HBox.hgrow="ALWAYS"/>
+                    <Button fx:id="addPlayerButton" text="Add Player" />
+                    <Button fx:id="rmvPlayerButton" text="RMV Player" />
+                </HBox>
+            </VBox>
+
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.controller.TournamentCreatePageController"
+            prefHeight="600"
+            prefWidth="750">
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Start a New Tournament" />
+            <TextField fx:id="tournamentNameField" promptText="Enter tournament name" maxWidth="300"/>
+            <ComboBox fx:id="tournamentTypeComboBox" prefWidth="300"/>
+            <Button fx:id="createTournamentButton" text="Create Tournament" prefWidth="300"/>
+            <Button fx:id="goToMainMenuButton" text="Back" prefWidth="300"/>
+        </VBox>
+    </center>
+</BorderPane>

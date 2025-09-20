@@ -1,0 +1,26 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.controller.FindTournamentPageController"
+            prefWidth="750"
+            prefHeight="600">
+
+    <top>
+        <HBox spacing="12" style="-fx-padding:16;">
+            <Label text="Turniere suchen"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="backButton" text="Zurück"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="8" style="-fx-padding:16;">
+            <TextField fx:id="tournamentNameField" promptText="Tournament name"/>
+            <ListView fx:id="tournamentListView" prefWidth="200" prefHeight="300"/>
+        </VBox>
+    </center>
+</BorderPane>

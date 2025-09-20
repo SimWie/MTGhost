@@ -1,0 +1,115 @@
+
+.root {
+    -fx-background-image: url("/app/css/bg.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+
+.label {
+    -fx-font-size: 35px;
+    -fx-text-fill: #ffffff;
+}
+
+.button {
+}
+
+.button, .combo-box, .text-field, .accordion, .list-view {
+    -fx-font-size: 19px;
+}
+
+#statusLabel {
+    -fx-font-size: 10px;
+}
+
+#teamAccordion,
+#teamAccordion .titled-pane,
+#teamAccordion .titled-pane > .title,
+#teamAccordion .titled-pane > *.content {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+}
+
+/* nur das Accordion mit fx:id="teamAccordion" */
+#teamAccordion .titled-pane > .title {
+    -fx-text-fill: white;            /* manchmal genug */
+}
+
+/* sicheres Target für den eigentlichen Titeltext */
+#teamAccordion .titled-pane > .title > .text {
+    -fx-fill: white;                 /* Text im Header */
+}
+
+/* Pfeil weiß färben */
+#teamAccordion .titled-pane > .title > .arrow-button {
+    -fx-background-color: transparent; /* kein Button-Hintergrund */
+}
+#teamAccordion .titled-pane > .title > .arrow-button > .arrow {
+    -fx-background-color: white;     /* Pfeil-Glyph */
+}
+
+/* optional: Fokusrahmen in weiß (Dark-UI) */
+#teamAccordion .titled-pane:focused > .title {
+    -fx-border-color: white;
+}
+
+/* ScrollPane selbst */
+#scrollPane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+/* die Viewport-Fläche (das weiße Rechteck) */
+#scrollPane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* die kleine Ecke unten rechts zwischen den Scrollbars */
+#scrollPane .corner {
+    -fx-background-color: transparent;
+}
+
+/* optional: Scrollbar-Track/Thumb anpassen (transparent Track, weiße Thumb) */
+#scrollPane .scroll-bar:vertical,
+#scrollPane .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+#scrollPane .track {
+    -fx-background-color: transparent;
+}
+#scrollPane .thumb {
+    -fx-background-color: rgba(255,255,255,0.4); /* oder transparent, wenn ganz unsichtbar */
+}
+
+/* falls der Content ein VBox/Pane ist: auch transparent */
+#contentBox {
+    -fx-background-color: transparent;
+}
+/* Basisgröße für alles im Accordion */
+#teamAccordion {
+    -fx-font-size: 14px; /* wähle 12/14/16 etc. */
+}
+
+/* Header-Titel im TitledPane (sicher gleiche Größe) */
+#teamAccordion .titled-pane > .title,
+#teamAccordion .titled-pane > .title > .text {
+    -fx-font-size: 14px;
+}
+
+/* Labels im Inhalt */
+#teamAccordion .label {
+    -fx-font-size: 14px;
+}
+
+/* ListView & Zellen im Accordion (Spielerlisten etc.) */
+#teamAccordion .list-view,
+#teamAccordion .list-cell {
+    -fx-font-size: 14px;
+}
+
+/* Optional: Buttons im Inhalt ebenfalls angleichen */
+#teamAccordion .button {
+    -fx-font-size: 14px;
+}
