@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.controller.HoasterGamePageController"
+            prefWidth="750"
+            prefHeight="600">
+
+    <top>
+        <Label fx:id="tournamentNameLabel" text="Tournier"/>
+    </top>
+
+    <center>
+        <ListView fx:id="tournamentListView" prefWidth="200" prefHeight="300"/>
+    </center>
+
+    <bottom>
+        <HBox>
+            <Button fx:id="backButton" text="Zurück"/>
+            <Button fx:id="nextButton" text="Next Matchups"/>
+        </HBox>
+    </bottom>
+</BorderPane>
