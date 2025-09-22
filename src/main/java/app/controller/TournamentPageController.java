@@ -121,6 +121,7 @@ public class TournamentPageController {
             }
         });
 
+        startButton.setOnAction(e -> SceneLoader.loadGamePage(tournament));
         backButton.setOnAction(e -> SceneLoader.loadMainMenu());
     }
 

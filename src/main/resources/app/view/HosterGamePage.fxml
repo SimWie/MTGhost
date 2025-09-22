@@ -8,20 +8,22 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="app.controller.FindTournamentPageController"
+            fx:controller="app.controller.HoasterGamePageController"
             prefWidth="750"
             prefHeight="600">
 
     <top>
-        <Label text="Tournier"/>
-
-
+        <Label fx:id="tournamentNameLabel" text="Tournier"/>
     </top>
 
     <center>
-        <VBox spacing="8" style="-fx-padding:16;">
-            <TextField fx:id="tournamentNameField" promptText="Tournament name"/>
-            <ListView fx:id="tournamentListView" prefWidth="200" prefHeight="300"/>
-        </VBox>
+        <ListView fx:id="tournamentListView" prefWidth="200" prefHeight="300"/>
     </center>
+
+    <bottom>
+        <HBox>
+            <Button fx:id="backButton" text="Zurück"/>
+            <Button fx:id="nextButton" text="Next Matchups"/>
+        </HBox>
+    </bottom>
 </BorderPane>

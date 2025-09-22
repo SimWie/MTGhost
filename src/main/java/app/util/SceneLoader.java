@@ -94,11 +94,12 @@ public class SceneLoader {
         }
     }
 
-    private static void loadGamePage(Tournament tournament) {
+    public static void loadGamePage(Tournament tournament) {
         try {
-            FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("FindTournamentPage.fxml"));
+            FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("HosterGamePage.fxml"));
             Parent root = loader.load();
-            FindTournamentPageController controller = loader.getController();
+            HoasterGamePageController controller = loader.getController();
+            controller.setTournament(tournament);
             Stage stage = (Stage) MainApp.getPrimaryStage();
             stage.setScene(buildScene(root));
         } catch (IOException e) {
